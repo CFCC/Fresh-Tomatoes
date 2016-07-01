@@ -1,0 +1,128 @@
+/**************
+			 * Whole Page *
+			 **************/
+html {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18pt;
+    margin: 0;
+    padding: 20px;
+    background: radial-gradient(
+            circle at top left,
+            #ff6b52,
+            #feff68,
+            #89c97b,
+            #7486ff,
+            #ba6bad
+    );
+}
+
+h1, h6 {
+    text-align: center;
+}
+
+/***************
+ * Movie Table *
+ ***************/
+
+.movie-table tr {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-table td {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 250px;
+}
+
+.movie-table img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+table {
+    position: relative;
+    width: 100%;
+    left: 0;
+}
+
+/**********************
+ * Add New Movie Form *
+ **********************/
+
+input, textarea {
+    padding: 30px 20px;
+    width: 50vw;
+    font-family: "Open Sans", sans-serif;
+    height: 28pt;
+    font-size: 14pt;
+    margin: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+label {
+    padding-right: 20px;
+    font-size: 14pt;
+    text-align: right;
+    display: inline-block;
+    width: 28vw;
+}
+
+button[type=submit] {
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    font-size: 14pt;
+}
+
+textarea {
+    overflow: visible;
+    resize: none;
+    height: 28pt;
+}
+
+form td {
+    width: 49%;
+    position: relative;
+}
+
+form td:only-child, form th {
+    width: 100%;
+    align-self: center;
+    padding: 20px;
+}
+
+tr:last-child:not(:only-child) {
+    text-align: center;
+}
+
+form thead {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+form th {
+    height: 10vh;
+}
+
+form > div {
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 90%;
+}
+
+.scrolling-placeholder {
+    position: relative;
+    height: 10vh;
+}
