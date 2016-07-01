@@ -7,61 +7,35 @@
 	<body>
 		<table>
 			<tr>
+				<?php
+				require ("database.php");
+				$d=display();
+				for($a=1; $a>count($d); $q++){
+				?>
 				<td>
 					<h2>
-					Toy Story 1
+					echo $d['title'];
 					</h2>
 					<strong>
-					8.3
+					echo $d['rating'];
 					</strong>
-					<img src="http://ia.media-imdb.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg">
+					<img src=echo $d['photo'];
 					<em>
-					1H 43Min
+					echo $d['lengthofmovie'];
 					</em>
 					<p>
-					The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.
+						echo $d['description'];
 					</p>
 
 				</td>					
+				<?php
+				}
+				?>	
 					
-					
-					
 
 
 					
-				<td>
-					<h2>
-					Toy Story 2
-					</h2>
-					<strong>
-					7.9
-					</strong>
-					<img src="http://ia.media-imdb.com/images/M/MV5BMTQ0OTU0NTcyNl5BMl5BanBnXkFtZTcwOTk5Mjc4OA@@._V1_UY268_CR9,0,182,268_AL_.jpg">
-					<em>
-					1H 32Min
-					</em>
-					<p>
-					A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.
-					</p>
-
-	</td>
-
-				<td>
-					<h2>
-					Toy Story 3
-					</h2>
-					<strong>
-					8.3
-					</strong>
-					<img src="http://ia.media-imdb.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_UY268_CR3,0,182,268_AL_.jpg">
-					<em>
-					1H 21Min.
-					</em>
-					<p>
-					When Woody is stolen by a toy collector, Buzz and his friends vow to rescue him, but Woody finds the idea of immortality in a museum tempting.
-					</p>
-
-				</td>
+				
 
 
 			</tr>
