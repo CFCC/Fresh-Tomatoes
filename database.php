@@ -1,9 +1,10 @@
 <?php
 function addnewmovies($title, $rating, $photo, $description, $lengthofmovie){
 		$db=new mysqli ("localhost","root","","fresh_tomatos");
-	$addrow="insert into movies(title, rating, photo, description, lengthofmovie)values(".$_POST['title'] . ',' . $_POST['rating'] . ',' . $_POST['photo'] . ',' . $_POST['description'] . ',' . $_POST['length'] .")";
+	$addrow="insert into movies(title, rating, photo, description, lengthofmovie) values('".$db->escape_string($_POST['title']) . "'," . $_POST['rating'] . ",'" . $db->escape_string($_POST['photo']) . "','" . $db->escape_string($_POST['description']) . "'," . $_POST['length'] .")";
 	$db->query($addrow);
 	$db->commit();
+	echo ($addrow);
 }
 function removemovies($title){
 		$remove="DELETE from movies where name=$title";
@@ -20,18 +21,22 @@ function editmovies($title, $rating, $photo, $description, $lengthofmovie){
 function getnewmovies($title){
 		$x="select * from movies where name=$title";
 	$db=new mysqli ("localhost","root","","fresh_tomatos");
-	$db->query($x);
-	$db->commit();
 		$c=$db->query($x);
-		return $b->fetch_assoc();
+		$am=[];
+		while($row=$b->fetch_assoc()){
+			array_push($am, $row);
+		}
+		return $am;
 }
 function display(){
 		$a="select * from movies";
 	$db=new mysqli ("localhost","root","","fresh_tomatos");
-	$db->query($a);
-	$db->commit();
 		$b=$db->query($a);
-		return $b-> fetch_assoc();
+		$pm=[];
+		while($row=$b->fetch_assoc()){
+			array_push($pm, $row);
+		}
+		return $pm;
 		
 }
 
