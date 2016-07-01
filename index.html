@@ -17,17 +17,17 @@ body{border:12px solid red;}
 				?>
 				<td>
 					<h2>
-					echo $d['title'];
+					<?php echo $d['title']; ?>
 					</h2>
 					<strong>
-					echo $d['rating'];
+					<?php echo $d['rating']; ?>
 					</strong>
-					<img src=echo $d['photo'];
+					<img src="<?php echo $d['photo']; ?>"/>
 					<em>
-					echo $d['lengthofmovie'];
+					<?php echo $d['lengthofmovie']; ?>
 					</em>
 					<p>
-						echo $d['description'];
+					<?php echo $d['description']; ?>
 					</p>
 				</td>					
 				<?php
