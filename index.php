@@ -64,7 +64,5 @@
 			</div>
 		</form>
 		<div class="scrolling-placeholder"></div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-		<script src="animations.js"></script>
 	</body>
 </html>

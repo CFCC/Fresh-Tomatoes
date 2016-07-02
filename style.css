@@ -1,6 +1,6 @@
 /**************
-			 * Whole Page *
-			 **************/
+ * Whole Page *
+ **************/
 html {
     font-family: "Open Sans", sans-serif;
     font-size: 18pt;
@@ -120,6 +120,13 @@ form > div {
     left: 0;
     right: 0;
     top: 90%;
+    transition: 500ms;
+}
+
+form > div:hover {
+    top: 20%;
+    bottom: 0;
+    transition: 500ms;
 }
 
 .scrolling-placeholder {
